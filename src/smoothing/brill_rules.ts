@@ -4,8 +4,8 @@ export interface Rule {
     type:number,
     c1:string,
     c2:string,
-    c3:string,
-    cr:RegExp,
+    c3?:string,
+    cr?:RegExp,
     secondRun:boolean,
     verify?:boolean
 }

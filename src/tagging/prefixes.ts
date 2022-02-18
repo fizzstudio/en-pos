@@ -1,4 +1,4 @@
-import lexicon = require('en-lexicon');
+import * as lexicon from '@fizz/en-lexicon';
 
 // important: prefixes array should start with the longer down to the shorter 
 const prefixes = [

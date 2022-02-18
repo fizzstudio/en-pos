@@ -1,4 +1,4 @@
-import inflectors = require("en-inflectors");
+import * as inflectors from "@fizz/en-inflectors";
 
 export default function(token:string):string{
 	const regex = /^([A-Z])(('[A-Z])?)[A-Za-z0-9.]+$/;

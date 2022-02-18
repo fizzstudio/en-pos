@@ -1,4 +1,4 @@
-import lexicon = require("en-lexicon");
+import * as lexicon from "@fizz/en-lexicon";
 import slang from "./slang";
 
 function tryToken(token:string):string{

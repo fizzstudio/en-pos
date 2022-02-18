@@ -1,4 +1,4 @@
-import lexicon = require("en-lexicon");
+import * as lexicon from "@fizz/en-lexicon";
 const list =<Array<Array<string>>> [
 	["no","nah","nope","n"],
 	["yes","yeah","yep","yup","yah","aye","yea","ya"],

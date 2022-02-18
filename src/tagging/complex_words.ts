@@ -1,4 +1,4 @@
-import lexicon = require("en-lexicon");
+import * as lexicon from "@fizz/en-lexicon";
 const rules = [
 	{
 		regexp:/(CD-CD(s)?)$/,

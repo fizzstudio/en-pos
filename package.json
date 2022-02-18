@@ -1,29 +1,39 @@
 {
-  "name": "en-pos",
+  "name": "@fizz/en-pos",
   "version": "1.0.16",
   "description": "A better English POS tagger written in JavaScript",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.fizz.studio"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "module": "dist/en-pos.esm.js",
   "scripts": {
-    "test": "mocha",
-    "build": "tsc",
-    "wsj": "ts-node test/wsj/wsj.ts",
-    "prepublish": "mocha && ts-node test/wsj/wsj.ts && tsc"
+    "tsc": "tsc",
+    "build": "tsc && rollup -c",
+    "dev": "tsc && rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build",
+    "doc": "rimraf ./docs/* && jsdoc -c .jsdoc/.jsdoc.html.json && jsdoc -c .jsdoc/.jsdoc.md.json",
+    "pubpatch": "npm version patch && npm publish",
+    "pubminor": "npm version minor && npm publish",
+    "pubmajor": "npm version major && npm publish"
   },
   "author": "Alex Corvi <alex@arrayy.com>",
   "license": "MIT",
   "dependencies": {
-    "cities-list": "^1.0.3",
-    "en-inflectors": "^1.0.7",
-    "en-lexicon": "^1.0.8",
-    "humannames": "^1.0.5"
+    "@fizz/cities-list": "^1.0.3",
+    "@fizz/en-inflectors": "^1.0.7",
+    "@fizz/en-lexicon": "^1.0.8",
+    "@fizz/humannames": "^1.0.5"
   },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finnlp/en-pos.git"
+    "url": "git+https://github.com/fizzstudio/en-pos.git"
   },
   "keywords": [
     "pos",
@@ -37,13 +47,20 @@
     "tag"
   ],
   "bugs": {
-    "url": "https://github.com/finnlp/en-pos/issues"
+    "url": "https://github.com/fizzstudio/en-pos/issues"
   },
-  "homepage": "https://github.com/finnlp/en-pos#readme",
+  "homepage": "https://github.com/fizzstudio/en-pos#readme",
   "devDependencies": {
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/mocha": "^2.2.39",
     "@types/node": "^7.0.7",
+    "eslint": "^8.3.0",
+    "jsdoc": "^3.6.7",
+    "kis-jsdoc-plugin": "^1.4.9",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.60.0",
     "ts-node": "^2.1.0",
-    "typescript": "^2.2.1"
+    "typescript": "^4.5.5"
   }
 }

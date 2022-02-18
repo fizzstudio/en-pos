@@ -1,6 +1,6 @@
 
-import inflectors = require("en-inflectors");
-import lexicon = require("en-lexicon");
+import * as inflectors from "@fizz/en-inflectors";
+import * as lexicon from "@fizz/en-lexicon";
 
 import {conditions as brillConditions} from "./smoothing/brill_conditions";
 import {rules as brillRules} from "./smoothing/brill_rules";
@@ -399,7 +399,7 @@ class Tag {
 			}
 
 			else if (type === brillConditions.CURRENTWDRGX) {
-				if (rule.cr.test(token) && ((!rule.verify)||((!lexicon.lexicon[token])||~lexicon.lexicon[token].split("|").indexOf(rule.to)))) this.tags[index] = rule.to;
+				if (rule.cr?.test(token) && ((!rule.verify)||((!lexicon.lexicon[token])||~lexicon.lexicon[token].split("|").indexOf(rule.to)))) this.tags[index] = rule.to;
 				continue;
 			}
 			

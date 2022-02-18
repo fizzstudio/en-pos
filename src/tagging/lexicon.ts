@@ -1,4 +1,4 @@
-import lexicon = require("en-lexicon");
+import * as lexicon from "@fizz/en-lexicon";
 
 export default function(word:string,sensitive?:boolean):string{
 	if(!sensitive) word = word.toLowerCase();
