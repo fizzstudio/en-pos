@@ -13,7 +13,7 @@
     "tsc": "tsc",
     "build": "tsc && rollup -c",
     "dev": "tsc && rollup -c -w",
-    "test": "node test/test.js",
+    "test": "mocha",
     "pretest": "npm run build",
     "doc": "rimraf ./docs/* && jsdoc -c .jsdoc/.jsdoc.html.json && jsdoc -c .jsdoc/.jsdoc.md.json",
     "pubpatch": "npm version patch && npm publish",
@@ -23,10 +23,10 @@
   "author": "Alex Corvi <alex@arrayy.com>",
   "license": "MIT",
   "dependencies": {
-    "@fizz/cities-list": "^1.0.3",
+    "@fizz/cities-list": "^1.0.4",
     "@fizz/en-inflectors": "^1.0.7",
     "@fizz/en-lexicon": "^1.0.8",
-    "@fizz/humannames": "^1.0.5"
+    "@fizz/humannames": "^1.0.7"
   },
   "directories": {
     "test": "test"
@@ -58,6 +58,7 @@
     "eslint": "^8.3.0",
     "jsdoc": "^3.6.7",
     "kis-jsdoc-plugin": "^1.4.9",
+    "mocha": "^10.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.60.0",
     "ts-node": "^2.1.0",

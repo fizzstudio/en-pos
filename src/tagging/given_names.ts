@@ -1,6 +1,6 @@
 /// <reference path="../../node_modules/@types/node/index.d.ts" />
 
-const names = require("humannames");
+import names from "@fizz/humannames";
 
 import capitalize from "./capitalize";
 
