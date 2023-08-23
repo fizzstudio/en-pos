@@ -6,7 +6,7 @@
     "access": "restricted",
     "registry": "https://npm.fizz.studio"
   },
-  "main": "./dist/index.js",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "module": "dist/en-pos.esm.js",
   "scripts": {
@@ -24,8 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "@fizz/cities-list": "^1.0.4",
-    "@fizz/en-inflectors": "^1.0.7",
-    "@fizz/en-lexicon": "^1.0.8",
+    "@fizz/en-inflectors": "^1.0.15",
+    "@fizz/en-lexicon": "^1.1.0",
     "@fizz/humannames": "^1.0.7"
   },
   "directories": {
@@ -62,6 +62,6 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.60.0",
     "ts-node": "^2.1.0",
-    "typescript": "^4.5.5"
+    "typescript": "^5.1.6"
   }
 }
